@@ -1,6 +1,29 @@
 %Please use LuaLaTeX or XeLaTeX
 \documentclass[11pt,aspectratio=169]{beamer}
 \usepackage{hyperref}
+% \usepackage{../latex/my_modifications}
+
+% for my table env
+      \usepackage{booktabs}
+      \usepackage{tabularx}
+      \usepackage{lipsum}
+      \usepackage{enumerate}
+      \usepackage{enumitem} %for compact itemize
+      % \usepackage{makecell} %for table 
+      %-------
+      % \renewcommand\labelitem{--}
+      \newenvironment{cptitemize}
+      {\par \parskip=0pt
+      \begin{minipage}[t]{\linewidth}
+            \vspace{-5pt}
+            \begin{itemize}[nosep, topsep=0pt,parsep=2pt,partopsep=0pt, leftmargin=5pt, rightmargin=0pt,after=\strut]
+      }{
+            \end{itemize}
+      \end{minipage}
+      }
+
+
+
 \title{Master Thesis}
 \date[FS 2022]{FS 2022} % put date here
 \author{Lukas Graz}
@@ -13,18 +36,17 @@
 \graphicspath{{../latex/figures/}}
 
 
-\newenvironment{cptitemize}[1][]{
-      \begin{itemize}[topsep=0pt,parsep=2pt,partopsep=0pt, leftmargin=5pt, rightmargin=-10pt]
-		#1
-      \end{itemize}
-}{}
 
 
 \begin{document}
 
 %\def\titlefigure{elements/title-page-image}		% Default image
-%\def\titlefigure{elements/title-page-image-43}	% Use this for 4:3 presentations
+% \def\titlefigure{elements/title-page-image-43}	% Use this for 4:3 presentations
 
+%% frame with different background
+% \colorlet{titlefgcolor}{ETHPurple}
+% \def\titlefigure{../latex/figures/satelite/sentinel-2-cover}
+% \title{Different background}
 \titleframe
 
 % \tocframe % for outline

@@ -1,19 +1,39 @@
 
 
+\begin{frame}
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \begin{center}
+                \includegraphics[width=\textwidth]{satelite/sentinel-2-bands.jpg}
+                $$\mathrm{NDVI}=\frac{(\mathrm{NIR}-\mathrm{Red})}{(\mathrm{NIR}+\mathrm{Red})}$$
+                \includegraphics[width=0.7\textwidth]{misc/Mean-spectral-reflectance-of-wheat-leaves-under-different-water-deficit-stress-levels.png}
+                \tiny \url{10.1016/j.biosystemseng.2017.05.007}
+            \end{center}
+        \end{column}
+        \begin{column}{0.35\textwidth}  %%<--- here
+            \begin{center}
+                \includegraphics[width=1\textwidth]{satelite/yield-raster.png}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{interpol/DL_smoothing_from_KamirEtAl2020.png}
+    \end{center}
+    \footnotetext{\tiny taken from https://doi.org/10.1016/j.isprsjprs.2019.11.008}
+\end{frame}
+
+\begin{frame}[fragile]{Nonparametric Regression}
+    \includegraphics[width=\textwidth]{interpol/fourier_dl_comparison.pdf}
+\end{frame}
 
 \begin{frame}
     \includegraphics[width=0.97\textwidth]{interpol/problem_illustration.pdf}
 \end{frame}
-
-% \begin{frame}[fragile]{Nonparametric Regression}
-    
-% 	\includegraphics[width=\textwidth]{interpol/fourier_dl_comparison.pdf}
-%     % \begin{cptitemize}
-%         %     {\item 1
-%         %     \item 2}
-%         % \end{cptitemize}
-        
-% \end{frame}
 
 
 \begin{frame}[fragile]
@@ -30,9 +50,10 @@
 \end{frame}
 
 \begin{frame}
-    scl class table from \url{https://mdpi-res.com/d_attachment/remotesensing/remotesensing-13-00300/article_deploy/remotesensing-13-00300-v2.pdf?version=1611106659}
-    \includegraphics[width=0.49\textwidth]{scl_classes.png}
+    \includegraphics[width=0.49\textwidth]{satelite/scl_classes.png}
     \includegraphics[width=0.49\textwidth]{interpol/residuals_scl_classes.pdf}
+
+    \footnotetext{\tiny scl class table from \url{https://mdpi-res.com/d_attachment/remotesensing/remotesensing-13-00300/article_deploy/remotesensing-13-00300-v2.pdf?version=1611106659}}
 \end{frame}
 
 \begin{frame}
