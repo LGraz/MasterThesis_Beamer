@@ -4,24 +4,27 @@
 % \usepackage{../latex/my_modifications}
 
 % for my table env
+      % \usepackage[dvipsnames]{xcolor}
       \usepackage{booktabs}
       \usepackage{tabularx}
       \usepackage{lipsum}
       \usepackage{enumerate}
-      \usepackage{enumitem} %for compact itemize
-      % \usepackage{makecell} %for table 
-      %-------
-      % \renewcommand\labelitem{--}
-      \newenvironment{cptitemize}
-      {\par \parskip=0pt
-      \begin{minipage}[t]{\linewidth}
-            \vspace{-5pt}
-            \begin{itemize}[nosep, topsep=0pt,parsep=2pt,partopsep=0pt, leftmargin=5pt, rightmargin=0pt,after=\strut]
-      }{
-            \end{itemize}
-      \end{minipage}
-      }
+      % \usepackage{enumitem} %for compact itemize
+      % % \usepackage{makecell} %for table 
+      % %-------
+      % % \renewcommand\labelitem{--}
+      % \newenvironment{cptitemize}
+      % {\par \parskip=0pt
+      % \begin{minipage}[t]{\linewidth}
+      %       \vspace{-5pt}
+      %       \begin{itemize}[nosep, topsep=0pt,parsep=2pt,partopsep=0pt, leftmargin=5pt, rightmargin=0pt,after=\strut]
+      % }{
+      %       \end{itemize}
+      % \end{minipage}
+      % }
 
+\definecolor{mygray}{gray}{0.4}
+\definecolor{myred}{rgb}{0.7, 0, 0}
 
 
 \title{Master Thesis}
@@ -51,7 +54,11 @@
 
 % \tocframe % for outline
 
+% \input{tex/data_vizualization}
+
 \input{tex/interpol}
+
+\input{tex/step_plots.tex}
 
 % \input{elements/template_frames.tex}
 

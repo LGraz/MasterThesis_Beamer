@@ -1,5 +1,2 @@
-
-    \vspace{-1cm}
-    \tiny
-    \input{../latex/tex/chapters/methods/pros_cons_overview.tex}
-    \normalsize
+\frametitle{Parametric Curve}
+\includegraphics[width=\textwidth]{interpol/fourier_dl_comparison.pdf}
