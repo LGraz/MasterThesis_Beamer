@@ -1,2 +1,6 @@
 \frametitle{Parametric Curve}
-\includegraphics[width=\textwidth]{interpol/fourier_dl_comparison.pdf}
+Curve fully determined by parameters (no data)
+    $$
+        NDVI(t) = f(a,b,c,d,e)
+    $$
+    \includegraphics[width=\textwidth]{interpol/fourier_dl_comparison.pdf}

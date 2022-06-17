@@ -23,8 +23,8 @@
             \begin{figure}
                 % \centering
                 \vspace{-1.6cm}
-                \includegraphics[width=\textwidth]{step_plot/1_ndvi.pdf}
-                \includegraphics[width=\textwidth]{step_plot/2_itpl.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years1_ndvi.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years2_itpl.pdf}
             \end{figure}
         \end{column}
     \end{columns}
@@ -34,14 +34,18 @@
 \begin{frame}[t]{2. Robust Reweighting}
     \begin{columns}
         \begin{column}{0.45\textwidth}
-
+            \begin{enumerate}
+                \item initial curve
+                \item give lower weight to outliers\\ (high residuals)
+                \item re-fit curve
+            \end{enumerate}
         \end{column}
         \begin{column}{0.45\textwidth}
             \begin{figure}
                 % \centering
                 \vspace{-1.6cm}
-                \includegraphics[width=\textwidth]{step_plot/2_itpl.pdf}
-                \includegraphics[width=\textwidth]{step_plot/3_itpl_rew.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years2_itpl.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years3_itpl_rew.pdf}
             \end{figure}
         \end{column}
     \end{columns}
@@ -51,17 +55,19 @@
 \begin{frame}[t]{3. Other Scl-Classes}
     \begin{columns}
         \begin{column}{0.45\textwidth}
+            \vspace{-1cm}
             \begin{figure}
                 % \centering
-                \includegraphics[width=1.1\textwidth]{satelite/scl_classes_cropped.png}
+                \includegraphics[width=0.6\textwidth]{satelite/scl_classes_cpt.png}
             \end{figure}
+            \textbf{SCL} = \textbf{S}cene \textbf{C}lassification \textbf{L}ayer
         \end{column}
         \begin{column}{0.45\textwidth}
             \begin{figure}
                 % \centering
                 \vspace{-1.6cm}
-                \includegraphics[width=\textwidth]{step_plot/3_itpl_rew.pdf}
-                \includegraphics[width=\textwidth]{step_plot/4_ndvi_scl.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years3_itpl_rew.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years4_ndvi_scl.pdf}
             \end{figure}
         \end{column}
     \end{columns}
@@ -71,8 +77,39 @@
 \begin{frame}[t]{4. Correction}
     \begin{columns}
         \begin{column}{0.45\textwidth}
-            \vspace{-1cm}
-            \includegraphics<1>[width=1.15\textwidth]{satelite/sentinel-2-bands.jpg}
+            % \vspace{-1cm}
+            % \includegraphics<1>[width=1.15\textwidth]{satelite/sentinel-2-bands.jpg}
+            \begin{itemize}
+                \item get ``true'' NDVI
+                \item get table:
+            \end{itemize}
+
+            \scriptsize
+            \begin{tabular}{| c |  c c c c |}
+                \hline
+                \color{myred}{``truth''} & observed & scl-class & B2-B10 & \color{mygray}{weather} \\
+                \color{myred}{``truth''} & observed & scl-class & B2-B10 & \color{mygray}{weather} \\
+                \color{myred}{\dots    } & \dots    & \dots     & \dots  & \color{mygray}{\dots}   \\
+                % \hline
+            \end{tabular}\normalsize \vspace{0.5cm}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \begin{figure}
+                % \centering
+                \vspace{-1.6cm}
+                \includegraphics<1>[width=\textwidth]{step_plot/all_years4_ndvi_scl.pdf}
+                \includegraphics<1>[width=\textwidth]{step_plot/all_years5_show_res.pdf}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    % \vfill\null
+\end{frame}
+
+\begin{frame}[t]{4. Correction}
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            % \vspace{-1cm}
+            % \includegraphics<1>[width=1.15\textwidth]{satelite/sentinel-2-bands.jpg}
             \begin{itemize}
                 \item get ``true'' NDVI
                 \item get table:
@@ -87,18 +124,17 @@
                 % \hline
             \end{tabular}\normalsize \vspace{0.5cm}
             \begin{itemize}
-                \item<2> Random Forest
-                \item<2> predict/correct NDVI
+                \item Random Forest
+                \item predict/correct NDVI
+                \item weather -- yes or no?
             \end{itemize}
         \end{column}
         \begin{column}{0.45\textwidth}
             \begin{figure}
                 % \centering
                 \vspace{-1.6cm}
-                \includegraphics<1>[width=\textwidth]{step_plot/4_ndvi_scl.pdf}
-                \includegraphics<1>[width=\textwidth]{step_plot/5_show_res.pdf}
-                \includegraphics<2>[width=\textwidth]{step_plot/5_show_res.pdf}
-                \includegraphics<2>[width=\textwidth]{step_plot/6_corr.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years5_show_res.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years6_corr.pdf}
             \end{figure}
         \end{column}
     \end{columns}
@@ -115,9 +151,9 @@
             \scriptsize
             \begin{tabular}{| c |  c c c c |}
                 \hline
-                \color{myred}{residuals} & observed & scl-class & B2-B10 & \color{mygray}{weather} \\
-                \color{myred}{residuals} & observed & scl-class & B2-B10 & \color{mygray}{weather} \\
-                \color{myred}{\dots    } & \dots    & \dots     & \dots  & \color{mygray}{\dots}   \\
+                \color{myred}{residuals}    & observed & scl-class & B2-B10   & \color{mygray}{weather}  \\
+                \color{myred}{residuals}    & observed & scl-class & B2-B10   & \color{mygray}{weather}  \\
+                \color{myred}{$\vdots$    } & $\vdots$ & $\vdots$  & $\vdots$ & \color{mygray}{$\vdots$} \\
                 % \hline
             \end{tabular}\normalsize \vspace{0.5cm}
 
@@ -131,8 +167,8 @@
             \begin{figure}
                 % \centering
                 \vspace{-1.6cm}
-                \includegraphics[width=\textwidth]{step_plot/6_corr.pdf}
-                \includegraphics[width=\textwidth]{step_plot/7_uncert.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years6_corr.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years7_uncert.pdf}
             \end{figure}
         \end{column}
     \end{columns}
@@ -143,14 +179,14 @@
     \begin{columns}
         \begin{column}{0.45\textwidth}
             \textbf{Reminder: Original Situation}
-            \includegraphics[width=\textwidth]{step_plot/1_ndvi.pdf}
+            \includegraphics[width=\textwidth]{step_plot/all_years1_ndvi.pdf}
         \end{column}
         \begin{column}{0.45\textwidth}
             \begin{figure}
                 % \centering
                 \vspace{-1.6cm}
-                \includegraphics[width=\textwidth]{step_plot/7_uncert.pdf}
-                \includegraphics[width=\textwidth]{step_plot/8_corr_itpl_rew.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years7_uncert.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years8_corr_itpl_rew.pdf}
             \end{figure}
         \end{column}
     \end{columns}
@@ -169,7 +205,7 @@
             \begin{figure}
                 % \centering
                 Use all years for training
-                \includegraphics[width=\textwidth]{step_plot/8_corr_itpl_rew.pdf}
+                \includegraphics[width=\textwidth]{step_plot/all_years8_corr_itpl_rew.pdf}
             \end{figure}
         \end{column}
     \end{columns}

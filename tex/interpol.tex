@@ -1,15 +1,12 @@
 
-
-
-
 \begin{frame}[fragile]{Parametric Curve}
+    Curve fully determined by parameters (no data)
+    $$
+        NDVI(t) = f(a,b,c,d,e)
+    $$
     \includegraphics[width=\textwidth]{interpol/fourier_dl_comparison.pdf}
 \end{frame}
 
-% % 3x3 plot of examples
-% \begin{frame}
-%     \includegraphics[width=0.97\textwidth]{interpol/problem_illustration.pdf}
-% \end{frame}
 
 
 % \begin{frame}[fragile]
@@ -21,7 +18,31 @@
 % \end{frame}
 
 
-\begin{frame}{Kriging / Gaussian Process Regression}
+\begin{frame}{Non-Parametric --- Gaussian Process Regression (Kriging)}
+    \textbf{Non-Parametric:} Curve also depends on data
+    \large
+    $$
+        NDVI(t) = f({data}, {tuning-parameters})
+    $$
     \includegraphics[width=\textwidth]{interpol/kriging_parameter.pdf}
 \end{frame}
+
+\begin{frame}{Non-Parametric --- LOESS / LOWESS}
+    A generalization of the \textbf{Savitzky-Golay Filter} \\
+    \color{mygray}{(allows for non-equidistant points and interpolation)}
+    \centering
+    \includegraphics[width=0.5\textwidth]{interpol/simple_example_loess.pdf}
+\end{frame}
+
+
+\begin{frame}{Non-Parametric --- Smoothing Splines}
+    $$\hat m :=\underset{f \in \mathcal F}{\operatorname{argmin}}
+        \overset{\underbrace{\sum_{i=1}^{n}\left(Y_{i}-{f}\left(x_{i}\right)\right)^{2}}}{\text{sum of squares }}
+        + \lambda \overset{\underbrace{\int {f}^{\prime \prime}(x)^{2} d x}}{\text{ smoothness}}$$
+    \centering
+    \includegraphics[width=0.4\textwidth]{interpol/simple_example_ss.pdf}
+
+    Similar Whittaker (but more general)
+\end{frame}
+
 
