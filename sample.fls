@@ -1767,6 +1767,10 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/wasy/wasy8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/bbold/bbold12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/bbold/bbold8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvri.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvr.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvri.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvri.tfm
 INPUT ../latex/figures//interpol/kriging_parameter.pdf
 INPUT ../latex/figures//interpol/kriging_parameter.pdf
 INPUT ../latex/figures//interpol/kriging_parameter.pdf
@@ -1837,7 +1841,6 @@ INPUT ../latex/figures//step_plot/all_years4_ndvi_scl.pdf
 INPUT ./elements/eth_logo_kurz_pos.pdf
 INPUT elements/eth_logo_kurz_pos.pdf
 INPUT ./elements/eth_logo_kurz_pos.pdf
-INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvr.tfm
 INPUT ../latex/figures//step_plot/all_years4_ndvi_scl.pdf
 INPUT ../latex/figures//step_plot/all_years4_ndvi_scl.pdf
 INPUT ../latex/figures//step_plot/all_years4_ndvi_scl.pdf
@@ -1926,8 +1929,8 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi9.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr9.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb
