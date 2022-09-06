@@ -10,49 +10,45 @@
 % 8_corr_itpl_rew.pdf
 %%%%%%%%%%%%%%%%%%%%%%
 
-
-
-
-
 \begin{frame}[t]{1. Interpolation}
     \begin{columns}
         \begin{column}{0.45\textwidth}
 
         \end{column}
-        \begin{column}{0.45\textwidth}
+        \begin{column}{0.42\textwidth}
             \begin{figure}
                 % \centering
-                \vspace{-1.6cm}
-                \includegraphics[width=\textwidth]{step_plot/all_years1_ndvi.pdf}
-                \includegraphics[width=\textwidth]{step_plot/all_years2_itpl.pdf}
+                \vspace{-1.8cm}
+                \includegraphics[width=\textwidth]{step_plot/2017-201_ndvi.pdf}
+                \includegraphics[width=\textwidth]{step_plot/2017-202_itpl.pdf}
             \end{figure}
         \end{column}
     \end{columns}
     % \vfill\null
 \end{frame}
 
-\begin{frame}[t]{2. Robust Reweighting}
-    \begin{columns}
-        \begin{column}{0.45\textwidth}
-            \begin{enumerate}
-                \item initial curve
-                \item give lower weight to outliers\\ (high residuals)
-                \item re-fit curve
-            \end{enumerate}
-        \end{column}
-        \begin{column}{0.45\textwidth}
-            \begin{figure}
-                % \centering
-                \vspace{-1.6cm}
-                \includegraphics[width=\textwidth]{step_plot/all_years2_itpl.pdf}
-                \includegraphics[width=\textwidth]{step_plot/all_years3_itpl_rew.pdf}
-            \end{figure}
-        \end{column}
-    \end{columns}
-    % \vfill\null
-\end{frame}
+% \begin{frame}[t]{2. Robust Reweighting}
+%     \begin{columns}
+%         \begin{column}{0.45\textwidth}
+%             \begin{enumerate}
+%                 \item initial curve
+%                 \item give lower weight to outliers\\ (high residuals)
+%                 \item re-fit curve
+%             \end{enumerate}
+%         \end{column}
+%         \begin{column}{0.42\textwidth}
+%             \begin{figure}
+%                 % \centering
+%                 \vspace{-1.8cm}
+%                 \includegraphics[width=\textwidth]{step_plot/2017-202_itpl.pdf}
+%                 \includegraphics[width=\textwidth]{step_plot/2017-203_itpl_rew.pdf}
+%             \end{figure}
+%         \end{column}
+%     \end{columns}
+%     % \vfill\null
+% \end{frame}
 
-\begin{frame}[t]{3. Other Scl-Classes}
+\begin{frame}[t]{2. Other SCL-Classes}
     \begin{columns}
         \begin{column}{0.45\textwidth}
             \vspace{-1cm}
@@ -62,19 +58,19 @@
             \end{figure}
             \textbf{SCL} = \textbf{S}cene \textbf{C}lassification \textbf{L}ayer
         \end{column}
-        \begin{column}{0.45\textwidth}
+        \begin{column}{0.42\textwidth}
             \begin{figure}
                 % \centering
-                \vspace{-1.6cm}
-                \includegraphics[width=\textwidth]{step_plot/all_years3_itpl_rew.pdf}
-                \includegraphics[width=\textwidth]{step_plot/all_years4_ndvi_scl.pdf}
+                \vspace{-1.8cm}
+                \includegraphics[width=\textwidth]{step_plot/2017-203_itpl_rew.pdf}
+                \includegraphics[width=\textwidth]{step_plot/2017-204_ndvi_scl.pdf}
             \end{figure}
         \end{column}
     \end{columns}
     % \vfill\null
 \end{frame}
 
-\begin{frame}[t]{4. Correction}
+\begin{frame}[t]{3. Correction}
     \begin{columns}
         \begin{column}{0.45\textwidth}
             % \vspace{-1cm}
@@ -93,19 +89,19 @@
                 % \hline
             \end{tabular}\normalsize \vspace{0.5cm}
         \end{column}
-        \begin{column}{0.45\textwidth}
+        \begin{column}{0.42\textwidth}
             \begin{figure}
                 % \centering
-                \vspace{-1.6cm}
-                \includegraphics<1>[width=\textwidth]{step_plot/all_years4_ndvi_scl.pdf}
-                \includegraphics<1>[width=\textwidth]{step_plot/all_years5_show_res.pdf}
+                \vspace{-1.8cm}
+                \includegraphics<1>[width=\textwidth]{step_plot/2017-204_ndvi_scl.pdf}
+                \includegraphics<1>[width=\textwidth]{step_plot/2017-205_show_res.pdf}
             \end{figure}
         \end{column}
     \end{columns}
     % \vfill\null
 \end{frame}
 
-\begin{frame}[t]{4. Correction}
+\begin{frame}[t]{3. Correction}
     \begin{columns}
         \begin{column}{0.45\textwidth}
             % \vspace{-1cm}
@@ -124,24 +120,24 @@
                 % \hline
             \end{tabular}\normalsize \vspace{0.5cm}
             \begin{itemize}
-                \item Random Forest
+                \item Statistical model
                 \item predict/correct NDVI
                 \item weather -- yes or no?
             \end{itemize}
         \end{column}
-        \begin{column}{0.45\textwidth}
+        \begin{column}{0.42\textwidth}
             \begin{figure}
                 % \centering
-                \vspace{-1.6cm}
-                \includegraphics[width=\textwidth]{step_plot/all_years5_show_res.pdf}
-                \includegraphics[width=\textwidth]{step_plot/all_years6_corr.pdf}
+                \vspace{-1.8cm}
+                \includegraphics[width=\textwidth]{step_plot/2017-205_show_res.pdf}
+                \includegraphics[width=\textwidth]{step_plot/2017-206_corr.pdf}
             \end{figure}
         \end{column}
     \end{columns}
     % \vfill\null
 \end{frame}
 
-\begin{frame}[t]{5. Uncertainty Estimation}
+\begin{frame}[t]{4. Uncertainty Estimation}
     \begin{columns}
         \begin{column}{0.45\textwidth}
             \begin{itemize}
@@ -158,56 +154,56 @@
             \end{tabular}\normalsize \vspace{0.5cm}
 
             \begin{itemize}
-                \item Random Forest
+                \item Statistical model
                 \item predict residuals
                 \item $weights = \frac{1}{|residual|}$
             \end{itemize}
         \end{column}
-        \begin{column}{0.45\textwidth}
+        \begin{column}{0.42\textwidth}
             \begin{figure}
                 % \centering
-                \vspace{-1.6cm}
-                \includegraphics[width=\textwidth]{step_plot/all_years6_corr.pdf}
-                \includegraphics[width=\textwidth]{step_plot/all_years7_uncert.pdf}
+                \vspace{-1.8cm}
+                \includegraphics[width=\textwidth]{step_plot/2017-206_corr.pdf}
+                \includegraphics[width=\textwidth]{step_plot/2017-207_uncert.pdf}
             \end{figure}
         \end{column}
     \end{columns}
     % \vfill\null
 \end{frame}
 
-\begin{frame}[t]{6. Robust Fit to Corrected NDVI}
+\begin{frame}[t]{5. Robust Fit to Corrected NDVI}
     \begin{columns}
         \begin{column}{0.45\textwidth}
             \textbf{Reminder: Original Situation}
-            \includegraphics[width=\textwidth]{step_plot/all_years1_ndvi.pdf}
+            \includegraphics[width=\textwidth]{step_plot/2017-201_ndvi.pdf}
         \end{column}
-        \begin{column}{0.45\textwidth}
+        \begin{column}{0.42\textwidth}
             \begin{figure}
                 % \centering
-                \vspace{-1.6cm}
-                \includegraphics[width=\textwidth]{step_plot/all_years7_uncert.pdf}
-                \includegraphics[width=\textwidth]{step_plot/all_years8_corr_itpl_rew.pdf}
+                \vspace{-1.8cm}
+                \includegraphics[width=\textwidth]{step_plot/2017-207_uncert.pdf}
+                \includegraphics[width=\textwidth]{step_plot/2017-208_corr_itpl_rew.pdf}
             \end{figure}
         \end{column}
     \end{columns}
     % \vfill\null
 \end{frame}
 
-\begin{frame}[t]{Overfitted?}
-    \begin{columns}
-        \begin{column}{0.45\textwidth}
-            \begin{figure}
-                Leave current year out for training
-                \includegraphics[width=\textwidth]{step_plot/2017-208_corr_itpl_rew.pdf}
-            \end{figure}
-        \end{column}
-        \begin{column}{0.45\textwidth}
-            \begin{figure}
-                % \centering
-                Use all years for training
-                \includegraphics[width=\textwidth]{step_plot/all_years8_corr_itpl_rew.pdf}
-            \end{figure}
-        \end{column}
-    \end{columns}
-    % \vfill\null
-\end{frame}
+% \begin{frame}[t]{Overfitted?}
+%     \begin{columns}
+%         \begin{column}{0.45\textwidth}
+%             \begin{figure}
+%                 Leave current year out for training
+%                 \includegraphics[width=\textwidth]{step_plot/2017-208_corr_itpl_rew.pdf}
+%             \end{figure}
+%         \end{column}
+%         \begin{column}{0.45\textwidth}
+%             \begin{figure}
+%                 % \centering
+%                 Use all years for training
+%                 \includegraphics[width=\textwidth]{step_plot/2017-208_corr_itpl_rew.pdf}
+%             \end{figure}
+%         \end{column}
+%     \end{columns}
+%     % \vfill\null
+% \end{frame}

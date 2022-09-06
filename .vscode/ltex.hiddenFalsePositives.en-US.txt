@@ -1,0 +1,1 @@
+{"rule":"DOUBLE_PUNCTUATION","sentence":"^\\Q../latex/figures/satelite/sentinel-2-cover\\E$"}

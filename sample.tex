@@ -27,7 +27,7 @@
 
 \definecolor{mygray}{gray}{0.4}
 \definecolor{myred}{rgb}{0.7, 0, 0}
-
+\usepackage{xstring}
 
 \title{Master Thesis}
 \date[FS 2022]{FS 2022} % put date here
@@ -41,8 +41,6 @@
 \graphicspath{{../latex/figures/}}
 
 
-
-
 \begin{document}
 
 %\def\titlefigure{elements/title-page-image}		% Default image
@@ -50,22 +48,26 @@
 
 %% frame with different background
 % \colorlet{titlefgcolor}{ETHPurple}
-% \def\titlefigure{../latex/figures/satelite/sentinel-2-cover}
+\def\titlefigure{../latex/figures/satelite/sentinel-2-cover_cropped}
 % \title{Different background}
 \titleframe
 
 % \tocframe % for outline
 
-% \input{tex/data_vizualization}
 
-\input{tex/intro}
-
+\input{tex/fromAtoB.tex}
+\input{tex/NDVI_def.tex}
+\input{tex/satellite_images_TS.tex}
+\input{tex/time-transformation.tex}
+\input{tex/exampleTS-itpl}
 \input{tex/interpol}
-
 \input{tex/step_plots.tex}
+\input{tex/yield-mapping data.tex}
+\input{tex/reproducibility.tex}
 
+
+
+
+% \input{tex/data_vizualization}
 % \input{elements/template_frames.tex}
-
-
-
 \end{document}

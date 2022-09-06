@@ -1,0 +1,94 @@
+\newcommand{\SCLdescription}[1]{%
+    \IfEqCase{#1}{%
+		{0}{Missing Data}
+		{1}{Saturated or defective pixel}
+		{2}{Dark features / Shadows}
+		{3}{Cloud shadows}
+		{4}{Vegetation}
+		{5}{Bare soils}
+		{6}{Water}
+		{7}{Cloud low probability}
+		{8}{Cloud medium probability}
+		{9}{Cloud high probability}
+		{10}{Thin cirrus cloud}
+		{11}{Snow or ice}
+        % you can add more cases here as desired
+    }[\PackageError{tree}{Undefined option to tree: #1}{}]%
+}
+
+\newcommand{\satelliteimageplot}[2][SCL-Class]{
+    \begin{frame}{Sentinel 2 Image  +  NDVI Time Series}
+		\begin{columns}
+			\begin{column}{0.45\textwidth}
+				% \vspace{-1cm}
+				\begin{figure}
+					% \centering
+					\includegraphics[width=\textwidth]{satelite/time_series_2021_P112/#2}
+				\end{figure}
+			\end{column}
+			\begin{column}{0.45\textwidth}
+				$\rightarrow$ \SCLdescription{#1}
+				\begin{figure}
+					% \vspace{-1.6cm}
+					\includegraphics[width=\textwidth]{satelite/time_series_2021_P112_ndvi/#2}
+				\end{figure}
+			\end{column}
+		\end{columns}
+	
+        % \includegraphics{satelite/time_series_2021_P112/#2}
+    \end{frame}
+}
+
+% \satelliteimageplot{50_scl5_2021-08-17}
+\satelliteimageplot[9]{00_scl9_2020-11-20}
+\satelliteimageplot[9]{01_scl9_2020-11-25}
+\satelliteimageplot[9]{02_scl9_2020-11-30}
+\satelliteimageplot[9]{03_scl9_2020-12-10}
+\satelliteimageplot[9]{04_scl9_2020-12-15}
+\satelliteimageplot[9]{05_scl9_2021-01-04}
+\satelliteimageplot[10]{06_scl10_2021-01-09}
+\satelliteimageplot[11]{07_scl11_2021-01-14}
+\satelliteimageplot[8]{08_scl8_2021-01-19}
+\satelliteimageplot[5]{09_scl5_2021-01-24}
+\satelliteimageplot[11]{10_scl11_2021-01-29}
+\satelliteimageplot[11]{11_scl11_2021-02-03}
+\satelliteimageplot[9]{12_scl9_2021-02-08}
+\satelliteimageplot[9]{13_scl9_2021-02-13}
+\satelliteimageplot[8]{14_scl8_2021-02-18}
+\satelliteimageplot[5]{15_scl5_2021-02-23}
+\satelliteimageplot[9]{16_scl9_2021-02-28}
+\satelliteimageplot[9]{17_scl9_2021-03-05}
+\satelliteimageplot[10]{18_scl10_2021-03-10}
+\satelliteimageplot[9]{19_scl9_2021-03-15}
+\satelliteimageplot[3]{20_scl3_2021-03-20}
+\satelliteimageplot[10]{21_scl10_2021-03-25}
+\satelliteimageplot[4]{22_scl4_2021-03-30}
+\satelliteimageplot[4]{23_scl4_2021-04-04}
+\satelliteimageplot[4]{24_scl4_2021-04-09}
+\satelliteimageplot[4]{25_scl4_2021-04-14}
+\satelliteimageplot[4]{26_scl4_2021-04-19}
+\satelliteimageplot[4]{27_scl4_2021-04-24}
+\satelliteimageplot[4]{28_scl4_2021-04-29}
+\satelliteimageplot[8]{29_scl8_2021-05-04}
+\satelliteimageplot[4]{30_scl4_2021-05-09}
+\satelliteimageplot[8]{31_scl8_2021-05-14}
+\satelliteimageplot[4]{32_scl4_2021-05-19}
+\satelliteimageplot[9]{33_scl9_2021-05-24}
+\satelliteimageplot[4]{34_scl4_2021-05-29}
+\satelliteimageplot[4]{35_scl4_2021-06-03}
+\satelliteimageplot[9]{36_scl9_2021-06-08}
+\satelliteimageplot[4]{37_scl4_2021-06-13}
+\satelliteimageplot[4]{38_scl4_2021-06-18}
+\satelliteimageplot[4]{39_scl4_2021-06-23}
+\satelliteimageplot[10]{40_scl10_2021-06-28}
+\satelliteimageplot[10]{41_scl10_2021-07-03}
+\satelliteimageplot[9]{42_scl9_2021-07-08}
+\satelliteimageplot[9]{43_scl9_2021-07-13}
+\satelliteimageplot[7]{44_scl7_2021-07-18}
+\satelliteimageplot[2]{45_scl2_2021-07-23}
+\satelliteimageplot[9]{46_scl9_2021-07-28}
+\satelliteimageplot[8]{47_scl8_2021-08-02}
+\satelliteimageplot[8]{48_scl8_2021-08-07}
+\satelliteimageplot[5]{49_scl5_2021-08-12}
+\satelliteimageplot[5]{50_scl5_2021-08-17}
+

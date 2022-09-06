@@ -1,48 +1,70 @@
 
-\begin{frame}[fragile]{Parametric Curve}
-    Curve fully determined by parameters (no data)
-    $$
-        NDVI(t) = f(a,b,c,d,e)
-    $$
-    \includegraphics[width=\textwidth]{interpol/fourier_dl_comparison.pdf}
+\begin{frame}[fragile]{Double Logistic Approximation}
+    % \includegraphics[width=\textwidth]{interpol/fourier_dl_comparison.pdf}
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            Curve fully determined by parameters (no data)
+            $$
+                NDVI(t) = f(a,b,c,d,e)
+            $$
+            
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth]{interpol/fourier_dl_comparison.pdf}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 
+        %% TABLE
+        % \begin{frame}[fragile]
+        %     \vspace{-1cm}
+        %     \tiny
+        %     % \input{../latex/tex/chapters/misc/pros_cons_overview.tex}
+        %     \input{/home/lukas/Documents/ETH/MASTER_THESIS/latex/tex/chapters/misc/pros_cons_overview.tex}
+        %     \normalsize
+        % \end{frame}
 
-% \begin{frame}[fragile]
+        %% KRIGING
+        % \begin{frame}{Non-Parametric --- Gaussian Process Regression (Kriging)}
+        %     \textbf{Non-Parametric:} Curve also depends on data
+        %     \large
+        %     $$
+        %         NDVI(t) = f(\textit{data}, \textit{ tuning-parameters})
+        %     $$
+        %     \includegraphics[width=\textwidth]{interpol/kriging_parameter.pdf}
+        % \end{frame}
 
-%     \vspace{-1cm}
-%     \tiny
-%     \input{../latex/tex/chapters/methods/pros_cons_overview.tex}
-%     \normalsize
-% \end{frame}
+        %% LOESS
+        % \begin{frame}{Non-Parametric --- LOESS / LOWESS}
+        %     A generalization of the \textbf{Savitzky-Golay Filter} \\
+        %     \color{mygray}{(allows for non-equidistant points and interpolation)}
+        %     \centering
+        %     \includegraphics[width=0.5\textwidth]{interpol/simple_example_loess.pdf}
+        % \end{frame}
 
-
-\begin{frame}{Non-Parametric --- Gaussian Process Regression (Kriging)}
-    \textbf{Non-Parametric:} Curve also depends on data
-    \large
-    $$
-        NDVI(t) = f(\textit{data}, \textit{ tuning-parameters})
-    $$
-    \includegraphics[width=\textwidth]{interpol/kriging_parameter.pdf}
-\end{frame}
-
-\begin{frame}{Non-Parametric --- LOESS / LOWESS}
-    A generalization of the \textbf{Savitzky-Golay Filter} \\
-    \color{mygray}{(allows for non-equidistant points and interpolation)}
-    \centering
-    \includegraphics[width=0.5\textwidth]{interpol/simple_example_loess.pdf}
-\end{frame}
+\newcommand{\RobItPlot}{fitted to different (SCL45) NDVI {TS}. Iterations of a robustifing refit (as indicated in section~\ref{sec:loess_robustify}) are also displayed.}
 
 
-\begin{frame}{Non-Parametric --- Smoothing Splines}
-    $$\hat m :=\underset{f \in \mathcal F}{\operatorname{argmin}}
-        \overset{\underbrace{\sum_{i=1}^{n}\left(Y_{i}-{f}\left(x_{i}\right)\right)^{2}}}{\text{sum of squares }}
-        + \lambda \overset{\underbrace{\int {f}^{\prime \prime}(x)^{2} d x}}{\text{ smoothness}}$$
-    \centering
-    \includegraphics[width=0.4\textwidth]{interpol/simple_example_ss.pdf}
 
-    Similar Whittaker (but more general)
+
+\begin{frame}{Smoothing Splines}
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            $$\widehat{NDVI}  :=\underset{f \in \mathcal F}{\operatorname{argmin}}\;
+                \underset{{\text{sum of squares}}}{\underbrace{{\sum_{i=1}^{n}\left(Y_{i}-{f}\left(x_{i}\right)\right)^{2} }}}
+                + \lambda \underset{{\text{ smoothness}}}{\underbrace{{\int {f}^{\prime \prime}(x)^{2} d x}}}$$
+            Similar to the Whittaker (but more general)
+        
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth]{interpol/simple_example_ss.pdf}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 
