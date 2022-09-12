@@ -1,6 +1,7 @@
-\begin{frame}{APPENDIX: OLS\textsuperscript{SCL}}
+\begin{frame}{OLS\textsuperscript{SCL}}
+	\large
 	\begin{eqnarray*}\label{eq:corr_lm}
-			{\operatorname{NDVI}}_{\text{corr}}  = &
+			{\widehat{\operatorname{NDVI}}_{\text{`true'}}}  = &
 			0.711 \operatorname{NDVI}_\text{observed}  
 			+ 0.215 \,\mathbbm 1_{{SCL = 2}} 
 			+ 0.237 \,\mathbbm 1_{{SCL = 3}} 
@@ -15,7 +16,7 @@
 	\end{eqnarray*} 
 
 	\begin{eqnarray*}\label{eq:corr_lm_res}
-			\widehat{\operatorname{abs}}\left({\operatorname{NDVI}_\text{`true'} - \operatorname{NDVI}}_{\text{corr}}\right)  = &
+			\widehat{\operatorname{abs}}\left({\operatorname{NDVI}_\text{`true'} - \widehat{\operatorname{NDVI}}_{\text{`true'}}}\right)  = &
 			-0.133 \operatorname{NDVI}_\text{observed}  
 			+ 0.186 \, \mathbbm 1_{{SCL = 2}} 
 			+ 0.185 \, \mathbbm 1_{{SCL = 3}} \\ &

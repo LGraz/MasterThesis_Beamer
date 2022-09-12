@@ -116,15 +116,15 @@
             % \vspace{-1cm}
             % \includegraphics<1>[width=1.15\textwidth]{satelite/sentinel-2-bands.jpg}
             \begin{itemize}
-                \item get ``true'' NDVI
+                \item get `true' NDVI
                 \item get table:
             \end{itemize}
 
-            \scriptsize
+            \small
             \begin{tabular}{| c |  c c c |}
                 \hline
-                \color{myred}{``truth''} & observed & scl-class & B2-B10 \\
-                \color{myred}{``truth''} & observed & scl-class & B2-B10 \\
+                \color{myred}{NDVI\textsuperscript{`true'}} & NDVI\textsuperscript{observed} & SCL & B2-B10 \\
+                \color{myred}{NDVI\textsuperscript{`true'}} & NDVI\textsuperscript{observed} & SCL & B2-B10 \\
                 \color{myred}{\dots    } & \dots    & \dots     & \dots  \\
                 % \hline
             \end{tabular}\normalsize \vspace{0.5cm}
@@ -147,15 +147,15 @@
             % \vspace{-1cm}
             % \includegraphics<1>[width=1.15\textwidth]{satelite/sentinel-2-bands.jpg}
             \begin{itemize}
-                \item get ``true'' NDVI
+                \item get `true' NDVI
                 \item get table:
             \end{itemize}
 
-            \scriptsize
+            \small
             \begin{tabular}{| c |  c c c |}
                 \hline
-                \color{myred}{``truth''} & observed & scl-class & B2-B10 \\
-                \color{myred}{``truth''} & observed & scl-class & B2-B10 \\
+                \color{myred}{NDVI\textsuperscript{`true'}} & NDVI\textsuperscript{observed} & SCL & B2-B10 \\
+                \color{myred}{NDVI\textsuperscript{`true'}} & NDVI\textsuperscript{observed} & SCL & B2-B10 \\
                 \color{myred}{\dots    } & \dots    & \dots     & \dots  \\
                 % \hline
             \end{tabular}\normalsize \vspace{0.5cm}
@@ -179,23 +179,23 @@
 \begin{frame}[t]{4. Uncertainty Estimation}
     \begin{columns}
         \begin{column}{0.45\textwidth}
-            \begin{itemize}
-                \item Table with residuals:
-            \end{itemize}
+            % \begin{itemize}
+              $$|\operatorname{residuals}| = |\operatorname{NDVI}^\text{`true'} - \widehat{\operatorname{NDVI}^\text{`true'}}|$$
+            % \end{itemize}
 
-            \scriptsize
+            \small
             \begin{tabular}{| c |  c c c |}
                 \hline
-                \color{myred}{residuals}    & observed & scl-class & B2-B10    \\
-                \color{myred}{residuals}    & observed & scl-class & B2-B10    \\
+                \color{myred}{|residuals|}  & NDVI\textsuperscript{observed} & SCL & B2-B10    \\
+                \color{myred}{|residuals|}  & NDVI\textsuperscript{observed} & SCL & B2-B10    \\
                 \color{myred}{$\vdots$    } & $\vdots$ & $\vdots$  & $\vdots$ \\
                 % \hline
             \end{tabular}\normalsize \vspace{0.5cm}
 
             \begin{itemize}
                 \item Statistical model
-                \item predict residuals
-                \item $weights = \frac{1}{|residual|}$
+                \item predict absolute residuals
+                \item $weights = \frac{1}{\widehat{|residual|}}$
             \end{itemize}
         \end{column}
         \begin{column}{0.42\textwidth}
