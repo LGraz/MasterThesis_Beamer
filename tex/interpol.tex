@@ -1,20 +1,13 @@
 
 \begin{frame}[fragile]{Double Logistic Approximation}
     % \includegraphics[width=\textwidth]{interpol/fourier_dl_comparison.pdf}
-    \begin{columns}
-        \begin{column}{0.45\textwidth}
-            Curve fully determined by parameters (no data)
-            $$
-                NDVI(t) = f(a,b,c,d,e)
-            $$
-            
-        \end{column}
-        \begin{column}{0.45\textwidth}
+            \begin{equation*}
+                \operatorname{NDVI}(t) = y_{\min} + \left(y_{\max}-y_{\min}\right)\left(\frac{1}{1+e^{-d_0(t-t_0)}}+\frac{1}{1+e^{-d_1(t-t_1)}}-1\right)
+            \end{equation*}
             \begin{figure}
-                \includegraphics[width=\textwidth]{interpol/simple_example_dl.pdf}
+                \centering
+                \includegraphics[width=0.45\textwidth]{interpol/simple_example_dl.pdf}
             \end{figure}
-        \end{column}
-    \end{columns}
 \end{frame}
 
 
