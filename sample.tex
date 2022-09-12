@@ -7,10 +7,13 @@
 
 % for my table env
       % \usepackage[dvipsnames]{xcolor}
+      % \usepackage{xcolor}
+      \usepackage{colortbl}
       \usepackage{booktabs}
       \usepackage{tabularx}
       \usepackage{lipsum}
       \usepackage{enumerate}
+      \usepackage{bbm}
       % \usepackage{enumitem} %for compact itemize
       % % \usepackage{makecell} %for table 
       % %-------
@@ -40,7 +43,7 @@
 \colorlet{accentcolor}{ETHRed}
 \graphicspath{{../latex/figures/}}
 
-
+\usepackage{tabularray}
 \begin{document}
 
 %\def\titlefigure{elements/title-page-image}		% Default image
@@ -57,14 +60,18 @@
 
 \input{tex/fromAtoB.tex}
 \input{tex/NDVI_def.tex}
+\input{tex/scl.tex}
 \input{tex/satellite_images_TS.tex}
 \input{tex/time-transformation.tex}
 \input{tex/exampleTS-itpl}
 \input{tex/interpol}
 \input{tex/step_plots.tex}
 \input{tex/yield-mapping data.tex}
+\input{tex/robustification.tex}
+\input{tex/results.tex}
 \input{tex/reproducibility.tex}
-
+\input{tex/end.tex}
+\input{tex/appendix.tex}
 
 
 

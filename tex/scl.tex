@@ -1,0 +1,79 @@
+    
+ 	\definecolor{SCL0color}{HTML}{000000}
+	 \definecolor{SCL1color}{HTML}{ff0000}
+	 \definecolor{SCL2color}{HTML}{404040}
+	 \definecolor{SCL3color}{HTML}{bf8144}
+	 \definecolor{SCL4color}{HTML}{00ff3c}
+	 \definecolor{SCL5color}{HTML}{ffed50}
+	 \definecolor{SCL6color}{HTML}{0d00fa}
+	 \definecolor{SCL7color}{HTML}{808080}
+	 \definecolor{SCL8color}{HTML}{bfbfbf}
+	 \definecolor{SCL9color}{HTML}{eeeeee}
+	 \definecolor{SCL10color}{HTML}{0bb8f0}
+	 \definecolor{SCL11color}{HTML}{ffbfbf}
+
+\begin{frame}{Scene Classification Layer (SCL)}
+
+	\begin{columns}
+		
+	\begin{column}{0.46\textwidth}
+		\begin{figure}
+			\vspace{-16pt}
+			\includegraphics[width=0.95\textwidth]{satelite/time_series_2021_P112/00_scl9_2020-11-20.png}
+		\end{figure}
+	\end{column}
+		\begin{column}{0.46\textwidth}
+					% \begin{table}[!h]
+		% 	\caption{Overview: Scene Classification Layers (SCL)}
+		% 	\label{tab:satelite/scl_classes}
+		% 	\center
+		% 	\includegraphics[width=0.8\textwidth]{satelite/scl_classes.png}
+		% \end{table}
+		\vspace{-1cm}
+		\begin{table}[h]
+			\footnotesize
+			\label{tab:satelite/scl_classes}
+			\centering
+			\begin{tblr}{
+				colspec = {p{0.1\linewidth} p{0.03\linewidth} p{0.6\linewidth}},
+			%   row{2} = {SCL3color},
+			%   column{3} = {teal7},
+			cell{2}{1} = {SCL0color},
+			  cell{3}{1} = {SCL1color},
+			  cell{4}{1} = {SCL2color},
+			  cell{5}{1} = {SCL3color},
+			  cell{6}{1} = {SCL4color},
+			  cell{7}{1} = {SCL5color},
+			  cell{8}{1} = {SCL6color},
+			  cell{9}{1} = {SCL7color},
+			  cell{10}{1} = {SCL8color},
+			  cell{11}{1} = {SCL9color},
+			  cell{12}{1} = {SCL10color},
+			  cell{13}{1} = {SCL11color},
+			  }
+			  % \toprule % not working :8
+			  \small
+			\hline
+			Color & No. & Class \\
+			\hline
+			& 0: & Missing Data 	\\
+			& 1: & Saturated or defective pixel 	\\
+			& 2: & Dark features / Shadows 	\\
+			& 3: & Cloud shadows 	\\
+			& 4: & Vegetation 	\\
+			& 5: & Bare soils 	\\
+			& 6: &  Water\\	 
+			& 7: &  Cloud low probability\\
+			& 8: &  Cloud medium probability\\
+			& 9: &  Cloud high probability\\
+			& 10: &  Thin cirrus cloud\\
+			& 11: &  Snow or ice\\
+			  \hline
+			%   \bottomrule
+			\end{tblr}
+		  \end{table}
+		\end{column}
+		
+	\end{columns}
+	\footnotetext{\tiny Spectral Reflectances \url{https://www.researchgate.net/figure/Reflectance-spectra-of-photosynthetic-green-vegetation-non-photosynthetic-dry_fig4_236677371}}
+\end{frame}

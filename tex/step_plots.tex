@@ -51,12 +51,52 @@
 \begin{frame}[t]{2. Other SCL-Classes}
     \begin{columns}
         \begin{column}{0.45\textwidth}
-            \vspace{-1cm}
-            \begin{figure}
+            \begin{table}[h]
+            \vspace{-0.6cm}
                 % \centering
-                \includegraphics[width=0.6\textwidth]{satelite/scl_classes_cpt.png}
-            \end{figure}
-            \textbf{SCL} = \textbf{S}cene \textbf{C}lassification \textbf{L}ayer
+                \tiny
+                \begin{tblr}{
+                    colspec = {p{0.1\linewidth} p{0.03\linewidth} p{0.5\linewidth}},
+                %   row{2} = {SCL3color},
+                %   column{3} = {teal7},
+                cell{2}{1} = {SCL0color},
+                  cell{3}{1} = {SCL1color},
+                  cell{4}{1} = {SCL2color},
+                  cell{5}{1} = {SCL3color},
+                  cell{6}{1} = {SCL4color},
+                  cell{7}{1} = {SCL5color},
+                  cell{8}{1} = {SCL6color},
+                  cell{9}{1} = {SCL7color},
+                  cell{10}{1} = {SCL8color},
+                  cell{11}{1} = {SCL9color},
+                  cell{12}{1} = {SCL10color},
+                  cell{13}{1} = {SCL11color},
+                  }
+                  % \toprule % not working :8
+                  \hline
+                Color & No. & Class \\
+                \hline
+                & 0: & Missing Data 	\\
+                & 1: & Saturated or defective pixel 	\\
+                & 2: & Dark features / Shadows 	\\
+                & 3: & Cloud shadows 	\\
+                & 4: & Vegetation 	\\
+                & 5: & Bare soils 	\\
+                & 6: &  Water\\	 
+                & 7: &  Cloud low probability\\
+                & 8: &  Cloud medium probability\\
+                & 9: &  Cloud high probability\\
+                & 10: &  Thin cirrus cloud\\
+                & 11: &  Snow or ice\\
+                  \hline
+                %   \bottomrule
+                \end{tblr}
+              \end{table}
+            % \begin{figure}
+            %     % \centering
+            %     \includegraphics[width=0.6\textwidth]{satelite/scl_classes_cpt.png}
+            % \end{figure}
+            % \textbf{SCL} = \textbf{S}cene \textbf{C}lassification \textbf{L}ayer
         \end{column}
         \begin{column}{0.42\textwidth}
             \begin{figure}

@@ -9,7 +9,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \begin{figure}
-                \includegraphics[width=\textwidth]{interpol/fourier_dl_comparison.pdf}
+                \includegraphics[width=\textwidth]{interpol/simple_example_dl.pdf}
             \end{figure}
         \end{column}
     \end{columns}
